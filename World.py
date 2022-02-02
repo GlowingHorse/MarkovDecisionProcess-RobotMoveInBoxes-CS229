@@ -88,6 +88,7 @@ class World:
         plt.title('MDP gridworld', size=16)
         plt.axis("equal")
         plt.axis("off")
+        plt.savefig("value_res.png")
         plt.show()
 
     def plot_policy(self, policy):
@@ -129,8 +130,10 @@ class World:
             for j in range(nRows, 0, -1):
                 plt.text(i + 0.25, j - 0.25, str(states[k]), fontsize=16, horizontalalignment='right', verticalalignment='bottom')
                 k += 1
+        plt.title('Robot moving policy', size=16)
         plt.axis("equal")
         plt.axis("off")
+        plt.savefig("policy_res.png")
         plt.show()
 
     def get_nrows(self):
